@@ -1,3 +1,5 @@
 I am Ms.B working on produc detail page.
 
 This was originally created in system.
+
+Before git status.
