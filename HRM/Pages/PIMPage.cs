@@ -19,8 +19,15 @@ namespace HRM.Pages
 
         internal void NavigateToPagePIM(string pageName)
         {
-            IList<IWebElement> ele = _driver.FindElements(linksToNaviagte);
-            
+            IList<IWebElement> links = _driver.FindElements(linksToNaviagte);
+            foreach (IWebElement link in links)
+            {
+                if (link.GetAttribute("href").ToLower().Contains(pageName.ToLower()))
+                {
+                    link.Click();
+                    break;
+                }
+            }
         }
     }
 }
